@@ -1,0 +1,36 @@
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:tns="uri://alcatel.com/apc/9.7"
+           targetNamespace="uri://alcatel.com/apc/9.7"  elementFormDefault="qualified">
+
+    <xs:element name="getNokiaRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="modify" type="tns:modify"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="modifyResponse">
+        <xs:complexType>
+            <xs:sequence>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="modify">
+        <xs:sequence>
+            <xs:element name="objectName" type="xs:string"/>
+            <xs:element name="templateName" type="xs:string"/>
+            <xs:element name="argument" type="tns:argument"/>
+            <xs:element name="operationInitiator" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="argument">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

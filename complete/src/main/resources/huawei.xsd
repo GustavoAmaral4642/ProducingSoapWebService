@@ -1,0 +1,44 @@
+<os:schema xmlns:os="http://www.w3.org/2001/XMLSchema" xmlns:ons="os.xsd.v1"
+           targetNamespace="os.xsd.v1" elementFormDefault="qualified">
+
+    <os:element name="BIND-ONTDBAPROF">
+        <os:complexType>
+            <os:sequence>
+                <os:element name="MODIFIER" type="os:string"/>
+                <os:element name="object" type="ons:object"/>
+                <os:element name="Session" type="os:string"/>
+                <os:element name="objectParas" type="ons:objectParas"/>
+            </os:sequence>
+        </os:complexType>
+    </os:element>
+
+    <os:element name="BINDResponse">
+        <os:complexType>
+            <os:sequence>
+                <os:element name="dateTime" type="os:string"/>
+                <os:element name="errCode" type="os:string"/>
+                <os:element name="errDesc" type="os:string"/>
+                <os:element name="Session" type="os:string"/>
+                <os:element name="DID" type="os:string"/>
+            </os:sequence>
+        </os:complexType>
+    </os:element>
+
+    <os:complexType name="object">
+        <os:sequence>
+            <os:element name="DEV" type="os:string"/>
+            <os:element name="FN" type="os:string"/>
+            <os:element name="SN" type="os:string"/>
+            <os:element name="PN" type="os:string"/>
+            <os:element name="ONTID" type="os:string"/>
+            <os:element name="TCONTID" type="os:string"/>
+        </os:sequence>
+    </os:complexType>
+
+    <os:complexType name="objectParas">
+        <os:sequence>
+            <os:element name="DBAPROF" type="os:string"/>
+        </os:sequence>
+    </os:complexType>
+
+</os:schema>
